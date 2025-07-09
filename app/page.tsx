@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <div>Hii</div>;
+  return <div className="font-kumbh">Hii</div>;
 }

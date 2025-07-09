@@ -3,7 +3,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Supreme";
+  src: url("../public/Supreme.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aileron";
+  src: url("../public/Aileron.otf") format("opentype");
+}
+
 @theme inline {
+  --font-primary: var(--font-supreme);
+  --font-secondary: var(--font-aileron);
+  --font-kumbh: var(--font-kumbh);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -44,6 +56,8 @@
 }
 
 :root {
+  --font-supreme: "Supreme", sans-serif;
+  --font-aileron: "Aileron", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -51,9 +65,9 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0% 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: #7a7a7a;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
