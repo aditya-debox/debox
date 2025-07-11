@@ -7,13 +7,15 @@ export enum DataType {
   number = "number",
   percentage = "percentage",
   none = "none",
+  text = "text",
 }
 
 export interface StatsProps {
   data: {
-    count: number;
+    count?: number;
     title: string;
     type: DataType;
+    text?: string;
   }[];
 }
 
@@ -83,6 +85,8 @@ const Stats: React.FC<StatsProps> = ({ data }) => {
             <motion.div
               variants={lineVariants}
               className={`absolute top-0 h-full w-px bg-primary ${
+                item.type === DataType.text ? "hidden" : ""
+              } ${
                 index === 2
                   ? "left-[70%]"
                   : index === 1
@@ -100,15 +104,21 @@ const Stats: React.FC<StatsProps> = ({ data }) => {
                 index % 2 === 0 ? "flex-row" : "flex-row-reverse"
               } items-start gap-4`}
             >
-              <p className={`font-kumbh flex text-4xl md:text-7xl font-bold`}>
-                {item.count}
+              <p
+                className={`${
+                  item.text
+                    ? "font-secondary max-w-[730px] flex text-base md:text-lg font-medium"
+                    : "font-kumbh flex text-4xl md:text-7xl font-bold"
+                }`}
+              >
+                {item.count ?? item.text}
                 {item.type == DataType.number
                   ? "+"
                   : item.type == DataType.percentage
                   ? "%"
                   : ""}{" "}
                 <span className="font-secondary font-semibold md:text-2xl text-sm">
-                  {item.title}
+                  {!item.text ? item.title : ""}
                 </span>
               </p>
             </motion.div>

@@ -26,7 +26,6 @@ const navData = [
 ];
 
 const Navbar = () => {
-  const [hoverId, setHoverId] = useState<null | number>(null);
   return (
     <div className="fixed border-b-2 border-black w-full bg-white !z-50">
       <div className="left-0 right-0 top-4 my-1 w-full px-6 md:py-2 !z-50 max-w-7xl mx-auto bg-white">
@@ -45,20 +44,9 @@ const Navbar = () => {
           </Link>
           <div className="flex items-center justify-between gap-6 uppercase font-kumbh font-bold cursor-pointer">
             {navData.map((item, index) => (
-              <p
-                onMouseEnter={() => setHoverId(index)}
-                onMouseLeave={() => setHoverId(null)}
-                key={index}
-                className="py-1 px-2 relative"
-              >
-                {hoverId === index && (
-                  <motion.span
-                    layoutId="hover-spam"
-                    className="absolute z-10 rounded-lg inset-0 bg-black"
-                  />
-                )}
-                <span className="relative z-20">{item.name}</span>
-              </p>
+              <span className="py-1.5 px-2 rounded-md transition-all duration-300 hover:text-white hover:bg-black">
+                {item.name}
+              </span>
             ))}
           </div>
         </div>

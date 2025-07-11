@@ -33,8 +33,8 @@ import { fadeIn } from "@/utils/motion";
 
 const HeroSection = () => {
   return (
-    <div className="lg:px-16 px-6">
-      <div className="flex items-center mx-auto min-h-[90vh] max-w-7xl">
+    <div className="lg:px-16 px-6 py-20">
+      <div className="flex items-center mx-auto min-h-[60vh] md:min-h-[90vh] max-w-7xl">
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
@@ -44,7 +44,7 @@ const HeroSection = () => {
         >
           <span className="flex">
             Great Results,
-            <Icon color="w-8 h-8 md:w-20 md:h-20 object-contain -mt-2 md:-mt-5" />
+            <Icon className="w-8 h-8 md:w-20 md:h-20 object-contain -mt-2 md:-mt-5" />
             <br />
           </span>
           not just
