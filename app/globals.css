@@ -5,11 +5,11 @@
 
 @font-face {
   font-family: "Supreme";
-  src: url("../public/Supreme.ttf") format("truetype");
+  src: url("../public/Supreme1.ttf") format("truetype");
 }
 @font-face {
   font-family: "Aileron";
-  src: url("../public/Aileron.otf") format("opentype");
+  src: url("../public/aileron.regular.otf") format("opentype");
 }
 
 @theme inline {
