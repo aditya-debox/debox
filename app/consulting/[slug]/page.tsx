@@ -16,6 +16,8 @@ import InsightsCards from "@/components/cards/InsightsCard";
 import ReviewCard from "@/components/cards/ReviewCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import StaggerCards from "@/components/ConsultingServices/StaggerCards";
+import IndustriesSection from "@/components/ConsultingServices/IndustriesSection";
+import EngagementApproachSection from "@/components/ConsultingServices/EngagementSection";
 
 export enum DataType {
   number = "number",
@@ -339,27 +341,27 @@ const ProjectCardData = [
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
-  },{
+  }, {
     title: "KALKI FASHION",
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
-  },{
+  }, {
     title: "KALKI FASHION",
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
-  },{
+  }, {
     title: "KALKI FASHION",
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
-  },{
+  }, {
     title: "KALKI FASHION",
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
-  },{
+  }, {
     title: "KALKI FASHION",
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
@@ -378,10 +380,10 @@ const sampleData = [
     title: 'Advanced Features',
     description: 'Dive deeper into more advanced features to enhance your application.',
     items: ['API ', 'Performance Optimization', 'Security Best Practices',
-        'API Integration', 'Performance Optimization', 'Security Best Practices',
-        'API Integration', 'Performance Optimization', 'Security Best Practices',
-        'API Integration', 'Performance Optimization', 
-      ],
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization',
+    ],
     learnMoreText: 'Explore Features'
   },
   {
@@ -391,6 +393,46 @@ const sampleData = [
     learnMoreText: 'Join the Community'
   }
 ];
+
+const leftIndustries = [
+  'Healthcare',
+  'Finance',
+  'Education',
+  'Retail',
+  'Manufacturing',
+];
+
+const rightIndustries = [
+  'Technology',
+  'Transportation',
+  'Real Estate',
+  'Energy',
+  'Hospitality',
+];
+
+const engagementData = {
+  title: "ENGAGEMENT<br/>APPROACH",
+  approaches: [
+    {
+      title: "FOUNDATION",
+      subtitle: "STRATEGY & OBJECTIVES",
+      description: "Foundation is for brands that need clear strategy and positioning to move forward with focus.",
+      learnMoreLink: "#foundation"
+    },
+    {
+      title: "FLAGSHIP",
+      subtitle: "STRATEGY & OBJECTIVES + EXECUTION",
+      description: "Flagship is for rebrands of refreshers, delivering strategy, identity, and guidelines to launch with clarity.",
+      learnMoreLink: "#flagship"
+    },
+    {
+      title: "FULLSAIL",
+      subtitle: "STRATEGY & OBJECTIVES + EXECUTION + DIGITISATION",
+      description: "Fullsail is for companies in high-growth mode, aligning brand build plus market activation.",
+      learnMoreLink: "#fullsail"
+    }
+  ]
+};
 const ConsultingServices = () => {
   return (
     <div>
@@ -400,28 +442,13 @@ const ConsultingServices = () => {
         title1="Consulting"
         title2="services"
       />
-        <LogoSlider />
+      <LogoSlider />
 
-        <StaggerCards data={sampleData} />
+      <StaggerCards data={sampleData} />
 
-      <CardSection data={cardData} title="Service Areas" isBlack />
-      <CardCarousel
-        titleLine1="Real Work,"
-        titleLine2="Real Impact!"
-        buttonTitle="Learn more"
-        buttonHref="/learn-more"
-        showBorder={true}
-      >
-        {ProjectCardData.map((card, index) => (
-          <ProjectCard
-            key={index}
-              image={card.image}
-              title={card.title}
-              description={card.desc}
-              linkHref={card.linkHref}
-          />
-        ))}
-      </CardCarousel>
+      <IndustriesSection headingLine1="INDUSTRIES"
+        headingLine2="WE WORK IN" leftColumn={leftIndustries}
+        rightColumn={rightIndustries} />
 
       <CardCarousel
         titleLine1="EXPECTATIONS DELIVERED,"
@@ -443,26 +470,13 @@ const ConsultingServices = () => {
         ))}
       </CardCarousel>
 
-      <CardCarousel
-        titleLine1="Blogs &"
-        titleLine2="Insights"
-        buttonTitle="Learn more"
-        buttonHref="/learn-more"
-        showBorder={false}
-      >
-        {InsightsCardsData.map((card, index) => (
-          <InsightsCards
-            key={index}
-            image={card.image}
-            imageAlt={card.imageAlt}
-            title={card.title}
-            subtitle={card.subtitle}
-            linkText={card.linkText}
-            linkHref={card.linkHref}
-          />
-        ))}
-      </CardCarousel>
-      
+      <EngagementApproachSection 
+        title={engagementData.title} 
+        approaches={engagementData.approaches as any} 
+      />
+
+
+
       <SurveyCTA
         heading="See where your company stands"
         subheading="in our Culture & Sustainability Survey."
