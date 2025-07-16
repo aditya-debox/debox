@@ -377,8 +377,11 @@ const sampleData = [
   {
     title: 'Advanced Features',
     description: 'Dive deeper into more advanced features to enhance your application.',
-    items: ['API Integration', 'Performance Optimization', 'Security Best Practices',
-        'API Integration', 'Performance Optimization', 'Security Best Practices'],
+    items: ['API ', 'Performance Optimization', 'Security Best Practices',
+        'API Integration', 'Performance Optimization', 'Security Best Practices',
+        'API Integration', 'Performance Optimization', 'Security Best Practices',
+        'API Integration', 'Performance Optimization', 
+      ],
     learnMoreText: 'Explore Features'
   },
   {
@@ -396,7 +399,6 @@ const ConsultingServices = () => {
         positioning, and identity into a brand that aligns culture and accelerates growth."
         title1="Consulting"
         title2="services"
-        
       />
         <LogoSlider />
 
