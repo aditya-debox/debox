@@ -1,24 +1,25 @@
 import React from "react";
 import Icon from "../Icons/Icon";
 import { useState } from "react";
+import Link from "next/link";
 
 interface CommonButtonProps {
   title: string;
   link?: string;
-  onClick?: () => void;
+  linkHref?: string;
   className?: string;
 }
 
 const CommonButton: React.FC<CommonButtonProps> = ({
     title,
     link,
-    onClick,
+    linkHref,
     className = "",
 }) => {
     const [hovered, setHovered] = useState(false);
     return (
-        <button
-        onClick={onClick}
+        <Link
+        href={linkHref ?? "#"}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className={`font-primary text-lg lg:text-2xl px-4 py-2 border-2 border-black cursor-pointer ${hovered ? "bg-black text-white": ""} ${className}`}>
@@ -26,7 +27,7 @@ const CommonButton: React.FC<CommonButtonProps> = ({
             <p>{title}</p>
             <Icon isBlack={!hovered} className="w-5 h-5" />
         </div>
-        </button>
+        </Link>
     );
 };
 

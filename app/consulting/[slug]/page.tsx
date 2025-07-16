@@ -15,6 +15,7 @@ import CardCarousel from "@/components/CardCarousel";
 import InsightsCards from "@/components/cards/InsightsCard";
 import ReviewCard from "@/components/cards/ReviewCard";
 import ProjectCard from "@/components/cards/ProjectCard";
+import StaggerCards from "@/components/ConsultingServices/StaggerCards";
 
 export enum DataType {
   number = "number",
@@ -366,18 +367,42 @@ const ProjectCardData = [
   },
 ]
 
-const Consulting = () => {
+const sampleData = [
+  {
+    title: 'Getting Started',
+    description: 'Learn how to set up your project and get started quickly with best practices. lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+    items: ['Installation', 'Setup Guide', 'First Steps'],
+    learnMoreText: 'Learn More'
+  },
+  {
+    title: 'Advanced Features',
+    description: 'Dive deeper into more advanced features to enhance your application.',
+    items: ['API Integration', 'Performance Optimization', 'Security Best Practices',
+        'API Integration', 'Performance Optimization', 'Security Best Practices'],
+    learnMoreText: 'Explore Features'
+  },
+  {
+    title: 'Community Resources',
+    description: 'Connect with the community and access valuable resources.',
+    items: ['Forums', 'Documentation', 'Tutorials'],
+    learnMoreText: 'Join the Community'
+  }
+];
+const ConsultingServices = () => {
   return (
     <div>
       <CommonHero
-        desc="We take pride in executing what we present."
-        title1="Change"
-        title2="Delivered,"
-        title3="Consistently!"
+        desc="We partner with executive teams to transform brand strategy, 
+        positioning, and identity into a brand that aligns culture and accelerates growth."
+        title1="Consulting"
+        title2="services"
+        
       />
-      <Stats data={data} />
+        <LogoSlider />
+
+        <StaggerCards data={sampleData} />
+
       <CardSection data={cardData} title="Service Areas" isBlack />
-      <LogoSlider />
       <CardCarousel
         titleLine1="Real Work,"
         titleLine2="Real Impact!"
@@ -445,4 +470,4 @@ const Consulting = () => {
   );
 };
 
-export default Consulting;
+export default ConsultingServices;

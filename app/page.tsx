@@ -1,4 +1,4 @@
-"use client";
+
 import CardSection from "@/components/common/CardSection";
 import Stats, { StatsProps } from "@/components/common/Stats";
 import HeroSection from "@/components/home/HeroSection";
@@ -9,7 +9,7 @@ import IPSection from "@/components/home/IPSection";
 import ImpactSection from "@/components/common/ImpactSection";
 import BlogCards from "@/components/common/BlogCards";
 import CaiStore from "@/assets/The Cai Store.jpg";
-import SectionLayout from "@/components/CardCarousel";
+import CardCarousel from "@/components/CardCarousel";
 import InsightsCards from "@/components/cards/InsightsCard";
 
 export enum DataType {
@@ -165,11 +165,11 @@ export default function Home() {
       <IPSection />
       {/* <ImpactSection titleLine1="Blogs &" titleLine2="insights," />
       <BlogCards data={blogData}  withBorder={false} /> */}
-      <SectionLayout
+      <CardCarousel
         titleLine1="Blogs"
         titleLine2="and Insights"
         buttonTitle="Learn more"
-        onButtonClick={() => console.log("Button clicked!")}
+        buttonHref="/learn-more"
         showBorder={false}
       >
         {InsightsCardsData.map((card, index) => (
@@ -183,7 +183,7 @@ export default function Home() {
             linkHref={card.linkHref}
           />
         ))}
-      </SectionLayout>
+      </CardCarousel>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import Icon from "../Icons/Icon";
 import Link from "next/link";
 import Image from "next/image";

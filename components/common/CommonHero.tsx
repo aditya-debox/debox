@@ -37,8 +37,7 @@ const CommonHero: React.FC<CommonHeroProps> = ({
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="font-secondary text-sm md:text-xl font-normal normal-case
- mt-4 w-full md:w-[405px] pl-1"
+            className="font-secondary text-sm md:text-xl font-normal normal-case mt-4 w-full md:w-[405px] pl-1"
           >
             {desc}
           </motion.span>
