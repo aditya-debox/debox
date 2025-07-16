@@ -5,14 +5,14 @@ const Heading = ({
   children,
   align = "center",
   color = "black",
-  clasName = "",
+  className = "",
   size = "8xl",
   as = "h2",
 }: {
   children: React.ReactNode;
   align?: string;
   color?: string;
-  clasName?: string;
+  className?: string;
   size?: string;
   as?: keyof JSX.IntrinsicElements;
 }) => {
@@ -20,7 +20,7 @@ const Heading = ({
 
   return (
     <Tag
-      className={`text-4xl md:text-6xl lg:text-${size} uppercase font-extrabold font-primary text-${align} text-${color} ${clasName}`}
+      className={`text-4xl md:text-6xl lg:text-${size} uppercase font-extrabold font-primary text-${align} text-${color} ${className}`}
     >
       {children}
     </Tag>

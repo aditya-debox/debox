@@ -261,7 +261,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="border-r border-white py-10 px-6">
+            <div className="border-r h-80 border-white py-10 px-6">
               <h3 className="font-primary uppercase text-2xl font-extrabold">
                 contact us
               </h3>

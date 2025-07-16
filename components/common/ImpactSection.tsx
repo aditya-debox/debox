@@ -17,10 +17,10 @@ const ImpactSection: React.FC<ImpactSectionProps> = ({
 
 
   return (
-    <section className="width-full px-6 lg:px-16 md:py-20 py-14">
+    <section className="width-full px-6 lg:px-16 md:py-20 py-14 overflow-hidden">
         <div className="mx-auto flex max-w-7xl items-end justify-between gap-14">
            {/* Title Text */}
-        <Heading clasName="" align="start">
+        <Heading className="" align="start">
           {titleLine1}
             <br />
         {titleLine2}
