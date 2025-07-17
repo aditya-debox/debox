@@ -7,11 +7,13 @@ import CommonButton from "./CommonButton";
 interface ImpactSectionProps {
   titleLine1: string;
   titleLine2: string;
+  buttonHref: string;
 }
 
 const ImpactSection: React.FC<ImpactSectionProps> = ({
   titleLine1,
   titleLine2,
+  buttonHref,
 }) => {
 
 
@@ -29,7 +31,7 @@ const ImpactSection: React.FC<ImpactSectionProps> = ({
         <div className="flex items-center justify-start">
             <CommonButton
                 title="Learn More"
-                onClick={() => { /* handle click */ }}
+                linkHref={buttonHref}
             />
         </div>
       </div>

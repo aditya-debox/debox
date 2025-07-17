@@ -18,6 +18,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import StaggerCards from "@/components/ConsultingServices/StaggerCards";
 import IndustriesSection from "@/components/ConsultingServices/IndustriesSection";
 import EngagementApproachSection from "@/components/ConsultingServices/EngagementSection";
+import Marquee from "@/components/common/Marquee";
 
 export enum DataType {
   number = "number",
@@ -382,7 +383,6 @@ const sampleData = [
     items: ['API ', 'Performance Optimization', 'Security Best Practices',
       'API Integration', 'Performance Optimization', 'Security Best Practices',
       'API Integration', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization',
     ],
     learnMoreText: 'Explore Features'
   },
@@ -391,27 +391,42 @@ const sampleData = [
     description: 'Connect with the community and access valuable resources.',
     items: ['Forums', 'Documentation', 'Tutorials'],
     learnMoreText: 'Join the Community'
-  }
+  },
+  {
+    title: 'Advanced Features',
+    description: 'Dive deeper into more advanced features to enhance your application.',
+    items: ['API ', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+    ],
+    learnMoreText: 'Explore Features'
+  },
+  {
+    title: 'Advanced Features',
+    description: 'Dive deeper into more advanced features to enhance your application.',
+    items: ['API ', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+    ],
+    learnMoreText: 'Explore Features'
+  },
+  
+  
 ];
 
 const leftIndustries = [
-  'Healthcare',
-  'Finance',
-  'Education',
-  'Retail',
-  'Manufacturing',
+  "Real Estate", " Retail & E-Commerce", "F&B (Food and Beverage)", 
 ];
 
 const rightIndustries = [
-  'Technology',
-  'Transportation',
-  'Real Estate',
-  'Energy',
-  'Hospitality',
+  'Gaming',
+  'Education',
+  'Luxury & Life',
 ];
 
 const engagementData = {
-  title: "ENGAGEMENT<br/>APPROACH",
+  heading1: "ENGAGEMENT",
+  heading2: "APPROACH",
   approaches: [
     {
       title: "FOUNDATION",
@@ -471,17 +486,20 @@ const ConsultingServices = () => {
       </CardCarousel>
 
       <EngagementApproachSection 
-        title={engagementData.title} 
+        heading1={engagementData.heading1} 
+        heading2={engagementData.heading2} 
         approaches={engagementData.approaches as any} 
       />
 
 
 
-      <SurveyCTA
-        heading="See where your company stands"
-        subheading="in our Culture & Sustainability Survey."
-        buttonText="Take A Survey"
-      />
+        <SurveyCTA 
+          heading="START THE CONVERSATION"
+          buttonText="Book A Call"
+          theme="dark"
+        />
+
+      <Marquee text="LET’S TALK" />
     </div>
   );
 };

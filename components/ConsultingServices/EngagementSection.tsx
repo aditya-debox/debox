@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Heading from '../common/Heading';
 // Define the type for a single approach object
 interface ApproachProps {
   title: string;
@@ -10,44 +11,48 @@ interface ApproachProps {
 
 // Define the type for the props of the main section component
 interface EngagementApproachProps {
-  title: string;
+  heading1: string;
+  heading2: string;
   approaches: ApproachProps[];
 }
 
-const EngagementApproachSection: React.FC<EngagementApproachProps> = ({ title, approaches }) => {
+const EngagementApproachSection: React.FC<EngagementApproachProps> = ({ heading1, heading2, approaches }) => {
   return (
-    <div className="bg-white text-black font-sans w-full max-w-7xl mx-auto border-t-2 border-black p-8">
-      {/* Section Title */}
-      <div className="p-8 md:p-12 border-b border-gray-300">
-        <h2 className="text-5xl md:text-6xl font-extrabold tracking-tighter uppercase" dangerouslySetInnerHTML={{ __html: title }}>
-        </h2>
-      </div>
-
-      {/* Approaches Grid */}
-      <div className="grid md:grid-cols-3 border-t-2 border-black">
-        {approaches.map((approach, index) => (
-           <div key={index} className={index < 2 ? 'md:border-r border-gray-300' : ''}>
-             {/* Card content is now directly inside the map */}
-             <div className="bg-black text-white p-8 flex flex-col h-full">
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-bold tracking-wide mb-4">{approach.title}</h3>
-                  <div className="border-t border-gray-600 mb-4"></div>
-                  <p className="text-sm font-bold tracking-wider mb-4">{approach.subtitle}</p>
-                  <p className="text-base font-light leading-relaxed">{approach.description}</p>
-                </div>
-                <a href={approach.learnMoreLink} className="mt-8 inline-flex items-center justify-between text-base underline">
-                  Learn more
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
+    <div className="px-6 lg:px-16 md:py-20 py-14 overflow-hidden">
+      <div className="flex flex-col max-w-7xl mx-auto">
+        {/* Section Title */}
+        <div className="pb-4 md:pb-10">
+          <Heading align="start">{heading1}</Heading>
+          <Heading align="start">{heading2}</Heading>
+        </div>
+        
+        {/* Single border line */}
+        <div className="border-t-2 border-black mb-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"></div>
+        
+        {/* Approaches Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-between gap-1">
+          {approaches.map((approach, index) => (
+            <div
+              key={index}
+              className="bg-black hover:bg-secondary text-white cursor-pointer w-full px-8 py-6 md:py-14 min-h-[300px] md:min-h-[440px] h-full flex flex-col"
+            >
+              <div className="flex flex-col gap-4 py-8 flex-grow">
+                <p className="font-kumbh font-bold uppercase text-xl !leading-8 tracking-wider md:!leading-10 md:text-3xl">
+                  {approach.title}
+                </p>
+                <div className="border-t-2 border-white w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-4"></div>
+                <p className="text-sm font-bold tracking-wider mb-4">{approach.subtitle}</p>
+                <p className="font-secondary text-base md:text-lg pt-3 max-w-[300px]">
+                  {approach.description}
+                </p>
               </div>
-           </div>
-        ))}
+              
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default EngagementApproachSection;
-
