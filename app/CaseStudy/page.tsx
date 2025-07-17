@@ -1,12 +1,17 @@
+'use client';
 import React from "react";
+import { useSearchParams, useRouter } from 'next/navigation';
 import IndustrySelector from "@/components/CaseStudy/IndustrySelector";
 import IndustryCards from "@/components/CaseStudy/IndustryCards";
 import ProjectCard from "@/components/cards/ProjectCard";
-import Cai from "@/assets/The Cai Store.jpg"
-
-
+import Cai from "@/assets/The Cai Store.jpg";
+import FilteredView from "@/components/CaseStudy/FIlteredView";
 
 const CaseStudy = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const selectedCategory = searchParams.get('Category') ?? undefined;
 
   const industries = [
     { id: "fashion", name: "Fashion" },
@@ -25,54 +30,82 @@ const CaseStudy = () => {
     {
       image: Cai.src,
       title: "BAWARCHI BIRYANIS ATLANTA",
-      description: "Bawarchi Atlanta - How we helped the Indian restaurant grow their online sales by 20%.",
-      linkHref: "#"
+      description: "How we helped the Indian restaurant grow their online sales by 20%.",
+      linkHref: "#",
+      category: "food"
     },
     {
       image: Cai.src,
       title: "HUB61 - THE INDIAN BISTRO",
-      description: "Hub61 - How we helped create a fresh and engaging take on the Indian restaurant experience.",
-      linkHref: "#"
+      description: "Hub61 - Engaging take on the Indian restaurant experience.",
+      linkHref: "#",
+      category: "food"
+    },
+    {
+      image: Cai.src,
+      title: "HUB61 - THE INDIAN BISTRO",
+      description: "Hub61 - Engaging take on the Indian restaurant experience.",
+      linkHref: "#",
+      category: "food"
     },
     {
       image: Cai.src,
       title: "PARAZELSUS",
-      description: "How we helped the cold storage logistics and supply chain company build a platform to track their entire operations digitally.",
-      linkHref: "#"
+      description: "Cold storage logistics and supply chain tracking.",
+      linkHref: "#",
+      category: "food"
     },
     {
       image: Cai.src,
       title: "KARMA REALTY",
-      description: "How we helped the Real Estate company build a Multi-powered website that showcases thousands of listings around North Carolina.",
-      linkHref: "#"
+      description: "Real estate listings platform.",
+      linkHref: "#",
+      category: "gaming"
     }
   ];
 
+  const filteredProjects = projectData.filter(project => {
+    if (!selectedCategory) return true;
+    return project.category === selectedCategory;
+  });
+
+  const handleBack = () => {
+    router.push('/CaseStudy'); // Clear query and go back to default view
+  };
+
   return (
-    <div>
-
-
-      <IndustrySelector
-        titleLine1="Choose Your"
-        titleLine2="Industry"
-        industries={industries}
-      />
-
-
-      <IndustryCards>
-        {projectData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            linkHref={project.linkHref}
+    <div className="py-10">
+      {selectedCategory ? (
+        <FilteredView
+          industries={industries}
+          currentCategory={selectedCategory}
+          filteredProjects={filteredProjects}
+          onBack={handleBack}
+        />
+      ) : (
+        <>
+          {/* ✅ Default layout with full selector */}
+          <IndustrySelector
+            titleLine1="Choose Your"
+            titleLine2="Industry"
+            industries={industries}
+            selectedIndustry={selectedCategory}
           />
-        ))}
-      </IndustryCards>
+
+          <IndustryCards>
+            {filteredProjects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                linkHref={project.linkHref}
+              />
+            ))}
+          </IndustryCards>
+        </>
+      )}
     </div>
-
-
   );
 };
 
