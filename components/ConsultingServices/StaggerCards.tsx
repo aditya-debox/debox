@@ -130,7 +130,7 @@ const Card: React.FC<{
 const StackingCards: React.FC<StackingCardsProps> = ({ data }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [unifiedHeight, setUnifiedHeight] = useState<number | null>(null);
-  // const [measuredHeights, setMeasuredHeights] = useState<number[]>([]);
+  const [measuredHeights, setMeasuredHeights] = useState<number[]>([]);
 
   useEffect(() => {
     const checkMobile = () => {

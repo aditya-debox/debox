@@ -74,7 +74,7 @@ const CaseStudy = () => {
   };
 
   return (
-    <div className="py-10">
+    <div className="py-25">
       {selectedCategory ? (
         <FilteredView
           industries={industries}

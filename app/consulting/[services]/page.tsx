@@ -1,4 +1,3 @@
-
 import CardSection from "@/components/common/CardSection";
 import CommonHero from "@/components/common/CommonHero";
 import Stats from "@/components/common/Stats";
@@ -342,91 +341,113 @@ const ProjectCardData = [
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
-  }, {
-    title: "KALKI FASHION",
-    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
-    image: kalkiFashion.src,
-    linkHref: "/consultation",
-  }, {
-    title: "KALKI FASHION",
-    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
-    image: kalkiFashion.src,
-    linkHref: "/consultation",
-  }, {
-    title: "KALKI FASHION",
-    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
-    image: kalkiFashion.src,
-    linkHref: "/consultation",
-  }, {
-    title: "KALKI FASHION",
-    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
-    image: kalkiFashion.src,
-    linkHref: "/consultation",
-  }, {
+  },
+  {
     title: "KALKI FASHION",
     desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
     image: kalkiFashion.src,
     linkHref: "/consultation",
   },
-]
+  {
+    title: "KALKI FASHION",
+    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
+    image: kalkiFashion.src,
+    linkHref: "/consultation",
+  },
+  {
+    title: "KALKI FASHION",
+    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
+    image: kalkiFashion.src,
+    linkHref: "/consultation",
+  },
+  {
+    title: "KALKI FASHION",
+    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
+    image: kalkiFashion.src,
+    linkHref: "/consultation",
+  },
+  {
+    title: "KALKI FASHION",
+    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
+    image: kalkiFashion.src,
+    linkHref: "/consultation",
+  },
+];
 
 const sampleData = [
   {
-    title: 'Getting Started',
-    description: 'Learn how to set up your project and get started quickly with best practices. lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-    items: ['API ', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
-    ],
-    learnMoreText: 'Learn More'
+    title: "Getting Started",
+    description:
+      "Learn how to set up your project and get started quickly with best practices. lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    items: ["Installation", "Setup Guide", "First Steps"],
+    learnMoreText: "Learn More",
   },
   {
-    title: 'Advanced Features',
-    description: 'Dive deeper into more advanced features to enhance your application.',
-    items: ['API ', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
+    title: "Advanced Features",
+    description:
+      "Dive deeper into more advanced features to enhance your application.",
+    items: [
+      "API ",
+      "Performance Optimization",
+      "Security Best Practices",
+      "API Integration",
+      "Performance Optimization",
+      "Security Best Practices",
+      "API Integration",
+      "Performance Optimization",
+      "Security Best Practices",
     ],
-    learnMoreText: 'Explore Features'
+    learnMoreText: "Explore Features",
   },
   {
-    title: 'Community Resources',
-    description: 'Connect with the community and access valuable resources.',
-    items: ['Forums', 'Documentation', 'Tutorials'],
-    learnMoreText: 'Join the Community'
+    title: "Community Resources",
+    description: "Connect with the community and access valuable resources.",
+    items: ["Forums", "Documentation", "Tutorials"],
+    learnMoreText: "Join the Community",
   },
   {
-    title: 'Advanced Features',
-    description: 'Dive deeper into more advanced features to enhance your application.',
-    items: ['API ', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
+    title: "Advanced Features",
+    description:
+      "Dive deeper into more advanced features to enhance your application.",
+    items: [
+      "API ",
+      "Performance Optimization",
+      "Security Best Practices",
+      "API Integration",
+      "Performance Optimization",
+      "Security Best Practices",
+      "API Integration",
+      "Performance Optimization",
+      "Security Best Practices",
     ],
-    learnMoreText: 'Explore Features'
+    learnMoreText: "Explore Features",
   },
   {
-    title: 'Advanced Features',
-    description: 'Dive deeper into more advanced features to enhance your application.',
-    items: ['API ', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
-      'API Integration', 'Performance Optimization', 'Security Best Practices',
+    title: "Advanced Features",
+    description:
+      "Dive deeper into more advanced features to enhance your application.",
+    items: [
+      "API ",
+      "Performance Optimization",
+      "Security Best Practices",
+      "API Integration",
+      "Performance Optimization",
+      "Security Best Practices",
+      "API Integration",
+      "Performance Optimization",
+      "Security Best Practices",
     ],
-    learnMoreText: 'Explore Features'
+    learnMoreText: "Explore Features",
   },
-  
-  
 ];
 
 const leftIndustries = [
-  "Real Estate", " Retail & E-Commerce", "F&B (Food and Beverage)", 
+  "Real Estate",
+  " Retail & E-Commerce",
+  "F&B (Food and Beverage)",
 ];
 
-const rightIndustries = [
-  'Gaming',
-  'Education',
-  'Luxury & Life',
-];
+const rightIndustries = ["Gaming", "Education", "Luxury & Life"];
 
 const engagementData = {
   heading1: "ENGAGEMENT",
@@ -435,22 +456,25 @@ const engagementData = {
     {
       title: "FOUNDATION",
       subtitle: "STRATEGY & OBJECTIVES",
-      description: "Foundation is for brands that need clear strategy and positioning to move forward with focus.",
-      learnMoreLink: "#foundation"
+      description:
+        "Foundation is for brands that need clear strategy and positioning to move forward with focus.",
+      learnMoreLink: "#foundation",
     },
     {
       title: "FLAGSHIP",
       subtitle: "STRATEGY & OBJECTIVES + EXECUTION",
-      description: "Flagship is for rebrands of refreshers, delivering strategy, identity, and guidelines to launch with clarity.",
-      learnMoreLink: "#flagship"
+      description:
+        "Flagship is for rebrands of refreshers, delivering strategy, identity, and guidelines to launch with clarity.",
+      learnMoreLink: "#flagship",
     },
     {
       title: "FULLSAIL",
       subtitle: "STRATEGY & OBJECTIVES + EXECUTION + DIGITISATION",
-      description: "Fullsail is for companies in high-growth mode, aligning brand build plus market activation.",
-      learnMoreLink: "#fullsail"
-    }
-  ]
+      description:
+        "Fullsail is for companies in high-growth mode, aligning brand build plus market activation.",
+      learnMoreLink: "#fullsail",
+    },
+  ],
 };
 const ConsultingServices = () => {
   return (
@@ -465,9 +489,12 @@ const ConsultingServices = () => {
 
       <StaggerCards data={sampleData} />
 
-      <IndustriesSection headingLine1="INDUSTRIES"
-        headingLine2="WE WORK IN" leftColumn={leftIndustries}
-        rightColumn={rightIndustries} />
+      <IndustriesSection
+        headingLine1="INDUSTRIES"
+        headingLine2="WE WORK IN"
+        leftColumn={leftIndustries}
+        rightColumn={rightIndustries}
+      />
 
       <CardCarousel
         titleLine1="EXPECTATIONS DELIVERED,"
@@ -489,21 +516,20 @@ const ConsultingServices = () => {
         ))}
       </CardCarousel>
 
-      <EngagementApproachSection 
-        heading1={engagementData.heading1} 
-        heading2={engagementData.heading2} 
-        approaches={engagementData.approaches as any} 
+      <EngagementApproachSection
+        heading1={engagementData.heading1}
+        heading2={engagementData.heading2}
+        approaches={engagementData.approaches as any}
+      />
+
+      <Marquee text="LET’S TALK" speed={10} className="bg-black text-black" />
+      <SurveyCTA
+        heading="START THE CONVERSATION"
+        buttonText="Book A Call"
+        theme="dark"
       />
 
 
-
-        <SurveyCTA 
-          heading="START THE CONVERSATION"
-          buttonText="Book A Call"
-          theme="dark"
-        />
-
-      <Marquee text="LET’S TALK" />
     </div>
   );
 };

@@ -23,7 +23,7 @@ const SurveyCTA: React.FC<SurveyCTAProps> = ({
   const isDark = theme === 'dark';
   
   return (
-    <section className={`w-full py-16 md:py-20 border-t-2 ${
+    <section className={`w-full py-16 md:py-20 border-t-2 border-b-2 ${
       isDark 
         ? 'bg-black border-white' 
         : 'bg-white border-black'

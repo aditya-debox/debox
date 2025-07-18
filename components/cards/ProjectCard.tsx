@@ -2,6 +2,7 @@
 import React from "react";
 import Icon from "../Icons/Icon";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectCardProps {
   image?: string;
@@ -30,7 +31,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="group relative h-[340px] w-full cursor-pointer overflow-hidden md:h-[440px]">
         {/* Background Image */}
         {image && (
-          <img
+          <Image
+            fill
             src={image}
             alt={title}
             className={`absolute inset-0 z-0 h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 ${imageClassName}`}

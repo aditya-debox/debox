@@ -1,57 +1,58 @@
-import React from "react";
+import React from 'react';
 
 interface MarqueeProps {
   text: string;
-  speed?: number; // animation duration in seconds
-  repetitions?: number; // how many times to repeat the text
-  fontSize?: string;
-  fontWeight?: string;
-  spacing?: string;
-  borderTop?: string;
   className?: string;
-  fontFamily?: string;
+  speed?: number;
 }
 
-const Marquee: React.FC<MarqueeProps> = ({
-  text,
-  speed = 12,
-  repetitions = 10,
-  fontFamily = "font-primary",
-  fontSize = "2rem",
-  fontWeight = "bold",
-  spacing = "2rem",
-  borderTop = "2px solid black",
-  className = ""
-}) => (
-  <div 
-    className={className}
-    style={{ 
-      overflow: "hidden", 
-      whiteSpace: "nowrap", 
-      borderTop,
-      width: "200%" 
-    }}
-  >
-    <div style={{
-      display: "inline-block",
-      animation: `marquee ${speed}s linear infinite`
-    }}>
-      {Array(repetitions).fill(text).map((t, i) => (
-        <span
-          className={`font-bold text-2xl mr-8 font-primary uppercase  ${className || ""}`}
-          key={i}
+const Marquee: React.FC<MarqueeProps> = ({ 
+  text, 
+  className = ' text-white font-primary uppercase', 
+  speed = 40,
+}) => {
+  const marqueeText = `${text}`;
+  // Option 2: Using individual spans with margin (alternative approach)
+  const repeatedTextArray = Array(20).fill(marqueeText);
+
+  return (
+    <>
+      <style>
+        {`
+          @keyframes marquee {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-marquee {
+            animation: marquee linear infinite;
+          }
+        `}
+      </style>
+
+      <div
+        className={`w-full flex overflow-hidden border-t-2 border-black select-none bg-white text-black ${className}`}
+      >
+        <div
+          className="flex-shrink-0 flex items-center justify-center whitespace-nowrap animate-marquee"
+          style={{ animationDuration: `${speed}s` }}
         >
-          {t}
-        </span>
-      ))}
-    </div>
-    <style>{`
-      @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-    `}</style>
-  </div>
-);
+          {repeatedTextArray.map((text, index) => (
+            <span 
+              key={index} 
+              className="py-3 text-2xl md:text-3xl lg:text-4xl font-bold uppercase mr-15"
+            >
+              {text}
+            </span>
+          ))}
+        </div>
+       
+      </div>
+    </>
+  );
+};
 
 export default Marquee;
