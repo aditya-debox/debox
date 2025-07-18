@@ -2,13 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { DataType } from "@/app/page";
 
-export enum DataType {
-  number = "number",
-  percentage = "percentage",
-  none = "none",
-  text = "text",
-}
+
 
 export interface StatsProps {
   data: {

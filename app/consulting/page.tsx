@@ -15,13 +15,10 @@ import CardCarousel from "@/components/CardCarousel";
 import InsightsCards from "@/components/cards/InsightsCard";
 import ReviewCard from "@/components/cards/ReviewCard";
 import ProjectCard from "@/components/cards/ProjectCard";
+import { DataType } from "../page";
 
-export enum DataType {
-  number = "number",
-  percentage = "percentage",
-  none = "none",
-  text = "text",
-}
+
+
 
 const cardData = [
   {
@@ -43,142 +40,19 @@ const data = [
   },
   {
     count: 8,
-    type: DataType.number,
+    type: DataType.number ,
     title: "YEARS",
   },
   {
     count: 15,
-    type: DataType.number,
+    type: DataType.number ,
     title: "INDUSTRIES",
   },
   {
     count: 80,
-    type: DataType.percentage,
+    type: DataType.percentage ,
     title: "REFERRAL RATE",
   },
-];
-
-const caseStudyData = [
-  {
-    title: "KALKI FASHION",
-    desc: "We helped a fast-growing women’s fashion brand scale by creating a Performance Management process with data trackers and dashboards for better insights.",
-    image: CaiStore.src, // Use the image path as a string
-  },
-  {
-    title: "THE CAI STORE",
-    desc: "How we helped the fast-growing women's footwear startup to structure their growth.",
-    image: CaiStore.src,
-  },
-  {
-    title: "NIPPO",
-    desc: "Implemented strategic improvements for Nippo’s business operations.",
-    image: CaiStore.src,
-  },
-  {
-    title: "NIPPO",
-    desc: "Implemented strategic improvements for Nippo’s business operations.",
-    image: CaiStore.src,
-  },
-  {
-    title: "NIPPO",
-    desc: "Implemented strategic improvements for Nippo’s business operations.",
-    image: CaiStore.src,
-  },
-];
-
-const EDheadingContent = (
-  <>
-    EXPECTATIONS DELIVERED,
-    <br />
-    CONSISTENTLY!
-  </>
-);
-
-const testimonialData = [
-  {
-    name: "Ritika Gupta",
-    role: "Director",
-    company: "Kalki Fashion",
-    paragraph: "We had the privilege to work with Debox at Kalki...",
-  },
-  {
-    name: "Aditya Shah",
-    role: "Partner",
-    company: "Juno's Hospitality LLP",
-    paragraph: "Debox are very focused in their approach...",
-  },
-
-  {
-    name: "Aditya Shah",
-    role: "Partner",
-    company: "Juno's Hospitality LLP",
-    paragraph: "Debox are very focused in their approach...",
-  },
-
-  {
-    name: "Aditya Shah",
-    role: "Partner",
-    company: "Juno's Hospitality LLP",
-    paragraph: "Debox are very focused in their approach...",
-  },
-
-  {
-    name: "Aditya Shah",
-    role: "Partner",
-    company: "Juno's Hospitality LLP",
-    paragraph:
-      "Debox are very focused in their approach... lorem ipsum dolor sit amet, consectetur adipiscing elit. lor",
-  },
-
-  {
-    name: "Aditya Shah",
-    role: "Partner",
-    company: "Juno's Hospitality LLP",
-    paragraph: "Debox are very focused in their approach...",
-  },
-
-  {
-    name: "Aditya Shah",
-    role: "Partner",
-    company: "Juno's Hospitality LLP",
-    paragraph: "Debox are very focused in their approach...",
-  },
-];
-
-const blogData = [
-  {
-    title: "Building Scalable Apps",
-    desc: "Discover how to build applications that scale effortlessly across platforms.",
-    image: CaiStore.src,
-  },
-  {
-    title: "React Performance Tips",
-    desc: "Boost your React apps with these proven performance optimization strategies.",
-    image: CaiStore.src,
-  },
-  {
-    title: "Mastering UI/UX",
-    desc: "Learn key principles of user experience and interface design.",
-    image: CaiStore.src,
-  },
-  {
-    title: "Mastering UI/UX",
-    desc: "Learn key principles of user experience and interface design.",
-    image: CaiStore.src,
-  },
-  {
-    desc: "Learn key principles of user experience and interface design.",
-    image: CaiStore.src,
-  },
-  {
-    desc: "Learn key principles of user experience and interface design.",
-    image: CaiStore.src,
-  },
-  {
-    desc: "Learn key principles of user experience and interface design.",
-    image: CaiStore.src,
-  },
-  // Add more blog items as needed
 ];
 
 const InsightsCardsData = [

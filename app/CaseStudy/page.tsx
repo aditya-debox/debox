@@ -1,18 +1,9 @@
-'use client';
-import React from "react";
-import { useSearchParams, useRouter } from 'next/navigation';
-import IndustrySelector from "@/components/CaseStudy/IndustrySelector";
-import IndustryCards from "@/components/CaseStudy/IndustryCards";
-import ProjectCard from "@/components/cards/ProjectCard";
+
+import React, { Suspense } from "react";
 import Cai from "@/assets/The Cai Store.jpg";
 import FilteredView from "@/components/CaseStudy/FIlteredView";
 
 const CaseStudy = () => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  const selectedCategory = searchParams.get('Category') ?? undefined;
-
   const industries = [
     { id: "fashion", name: "Fashion" },
     { id: "food", name: "Food" },
@@ -64,47 +55,11 @@ const CaseStudy = () => {
     }
   ];
 
-  const filteredProjects = projectData.filter(project => {
-    if (!selectedCategory) return true;
-    return project.category === selectedCategory;
-  });
-
-  const handleBack = () => {
-    router.push('/CaseStudy'); // Clear query and go back to default view
-  };
-
   return (
     <div className="py-25">
-      {selectedCategory ? (
-        <FilteredView
-          industries={industries}
-          currentCategory={selectedCategory}
-          filteredProjects={filteredProjects}
-          onBack={handleBack}
-        />
-      ) : (
-        <>
-          {/* ✅ Default layout with full selector */}
-          <IndustrySelector
-            titleLine1="Choose Your"
-            titleLine2="Industry"
-            industries={industries}
-            selectedIndustry={selectedCategory}
-          />
-
-          <IndustryCards>
-            {filteredProjects.map((project, index) => (
-              <ProjectCard
-                key={index}
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                linkHref={project.linkHref}
-              />
-            ))}
-          </IndustryCards>
-        </>
-      )}
+      <Suspense fallback={<div>Loading...</div>}>
+        <FilteredView industries={industries} projectData={projectData}  />
+      </Suspense>
     </div>
   );
 };
