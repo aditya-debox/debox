@@ -29,7 +29,7 @@ const Marquee: React.FC<MarqueeProps> = ({
       overflow: "hidden", 
       whiteSpace: "nowrap", 
       borderTop,
-      width: "100%" 
+      width: "200%" 
     }}
   >
     <div style={{
@@ -37,14 +37,9 @@ const Marquee: React.FC<MarqueeProps> = ({
       animation: `marquee ${speed}s linear infinite`
     }}>
       {Array(repetitions).fill(text).map((t, i) => (
-        <span 
-          key={i} 
-          style={{ 
-            fontWeight, 
-            fontSize, 
-            marginRight: spacing,
-            fontFamily
-          }}
+        <span
+          className={`font-bold text-2xl mr-8 font-primary uppercase  ${className || ""}`}
+          key={i}
         >
           {t}
         </span>

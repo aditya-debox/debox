@@ -374,7 +374,11 @@ const sampleData = [
   {
     title: 'Getting Started',
     description: 'Learn how to set up your project and get started quickly with best practices. lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-    items: ['Installation', 'Setup Guide', 'First Steps'],
+    items: ['API ', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+      'API Integration', 'Performance Optimization', 'Security Best Practices',
+    ],
     learnMoreText: 'Learn More'
   },
   {
