@@ -21,7 +21,7 @@ const CardSection: React.FC<CardSectionProps> = ({
   return (
     <div className="px-6 lg:px-16 md:py-20 py-14">
       <div className="flex flex-col max-w-7xl mx-auto">
-        <Heading clasName="pb-4 md:pb-10" align="start">
+        <Heading className="pb-4 md:pb-10" align="start">
           {title}
         </Heading>
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-between gap-1">
